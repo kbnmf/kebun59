@@ -1,19 +1,34 @@
 # Kebun59 — Manajemen Kebun & Usaha Bibit
 
-Aplikasi web responsif untuk mengelola inventaris tanaman, peralatan, stok bahan, perawatan, perbanyakan stek, produksi bibit, penjualan, dan pengeluaran.
+Aplikasi web responsif untuk pencatatan dan pemantauan operasional kebun serta usaha pembibitan.
 
-## Menjalankan
-Buka `index.html` melalui browser atau deploy repository ini ke GitHub Pages.
+## Modul aplikasi
+- Dashboard: ringkasan tanaman, produksi stek, stok, omzet, dan pengeluaran.
+- Inventaris Tanaman dan Inventaris Alat.
+- Stok Bahan.
+- Log Perawatan dan Log Stek.
+- Produksi & Stok Bibit.
+- Penjualan dan Pengeluaran.
+- Laporan dan Panduan.
 
 ## Fitur
-- Dashboard KPI kebun dan usaha bibit.
-- CRUD data untuk 8 modul operasional.
-- Pencarian, ekspor CSV per modul, backup JSON.
-- Impor workbook Excel (.xlsx/.xls) melalui SheetJS.
-- Penyimpanan lokal browser (localStorage).
+- Tambah, edit, hapus, dan cari data pada setiap modul.
+- Impor workbook Excel (.xlsx/.xls) berdasarkan sheet pada template Kebun59.
+- Ekspor seluruh data ke workbook Excel.
+- Ekspor CSV per modul.
+- Penyimpanan lokal melalui browser (localStorage).
 
-## Catatan
-Versi awal ini berjalan tanpa backend dan tanpa autentikasi. Data berada di browser/perangkat yang digunakan, bukan tersinkron antar perangkat. Lakukan backup secara berkala. Untuk penggunaan multi-user/online, integrasikan backend dan database.
+## Menjalankan secara lokal
+Buka `index.html` menggunakan browser modern. Fitur impor/ekspor Excel memerlukan koneksi internet untuk memuat SheetJS dari CDN.
 
-## Deploy GitHub Pages
-Repository Settings → Pages → Deploy from a branch → pilih `main` dan folder `/ (root)`.
+## Deploy ke GitHub Pages
+1. Buka **Settings → Pages** pada repository.
+2. Pada **Build and deployment**, pilih **Deploy from a branch**.
+3. Pilih branch `main` dan folder `/ (root)`, lalu klik **Save**.
+4. Tunggu proses deploy selesai. URL situs akan ditampilkan di halaman Pages.
+
+## Penting tentang data
+Versi ini adalah MVP frontend tanpa backend, login, atau sinkronisasi cloud. Data tersimpan di browser dan perangkat yang digunakan. Data tidak otomatis muncul di browser/perangkat lain. Ekspor workbook secara berkala sebagai cadangan. Jangan hapus data browser sebelum mengekspor data.
+
+## Teknologi
+HTML, CSS, JavaScript, localStorage, dan SheetJS (CDN).
